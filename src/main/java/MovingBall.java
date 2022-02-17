@@ -13,27 +13,24 @@ public class MovingBall extends PApplet {
         PApplet.main("MovingBall", args);
     }
 
-    /*@Override                                             //Only used when necessary like in Eclipse
+    @Override                                             //Correction: Now used to setup the screen size and things related to the environment
     public void settings() {
         super.settings();
         size(SCREEN_WIDTH, SCREEN_HEIGHT);
-    }*/
+    }
 
     @Override
-    public void setup() {                       //Used at most places
+    public void setup() {                       //Used to declare variables and initalisation
         int xCoordinate = SCREEN_WIDTH / 2;
         int yCoordinate = SCREEN_HEIGHT / 2;
 
-        size(SCREEN_WIDTH, SCREEN_HEIGHT);
-
-        drawBackground(0);
+        drawBackground(BACKGROUND_COLOR);
 
         ellipse(xCoordinate, yCoordinate, 100, 100);
     }
 
     @Override
     public void draw() {
-        drawBackground(BACKGROUND_COLOR);
         ellipse(mouseX, 100, 100, 100);
     }
 
