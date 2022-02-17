@@ -41,7 +41,7 @@ public class MovingBall extends PApplet {
     }
 
     private void drawCircle(float xCoordinate, float yCoordinate) {
-        ellipse(xCoordinate, yCoordinate, MovingBall.RADIUS, MovingBall.RADIUS);
+        ellipse(xCoordinate, yCoordinate, MovingBall.RADIUS, RADIUS);
     }
 
     private static Dimension getScreenSize() {
