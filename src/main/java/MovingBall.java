@@ -29,15 +29,15 @@ public class MovingBall extends PApplet {
 
     @Override
     public void draw() {
-        moveBall(1,1);
-        moveBall(2,2);
-        moveBall(3,3);
-        moveBall(4,4);
+        moveBall(1, new Ball(RADIUS, 1));
+        moveBall(2, new Ball(RADIUS, 2));
+        moveBall(3, new Ball(RADIUS, 3));
+        moveBall(4, new Ball(RADIUS, 4));
         frame ++;
     }
 
-    private void moveBall(float verticalPosition, int speed) {
-        drawCircle(speed*frame, verticalPosition*SCREEN_HEIGHT/5);
+    private void moveBall(float verticalPosition, Ball ball) {
+        drawCircle(ball.getSpeed()*frame, verticalPosition*SCREEN_HEIGHT/5);
     }
 
     private void drawCircle(float xCoordinate, float yCoordinate) {
